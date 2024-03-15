@@ -27,3 +27,27 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+
+const imgList = document.querySelector(".gallery");
+
+
+function imgOnscreen(images) {
+
+  return images
+ 
+.map(({ url, alt }, index) => `
+      <li class="img-item">
+      <img src="${url}" alt="${alt}" >
+    </li>
+    `)
+.join("");  
+}
+imgList.insertAdjacentHTML("beforeend", imgOnscreen(images));
+
+
+imgList.style.display = "flex";
+imgList.style.flexWrap = "wrap";
+imgList.style.gap = "25px";
+
+
