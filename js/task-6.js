@@ -1,5 +1,3 @@
-// task-6.js
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
@@ -22,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Очищаємо вміст контейнера перед створенням нових елементів
     boxesContainer.innerHTML = "";
 
     let size = 30;
